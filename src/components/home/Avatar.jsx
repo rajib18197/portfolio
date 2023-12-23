@@ -84,7 +84,7 @@ const Img = styled.img`
 export default function Avatar() {
   return (
     <StyledAvatar>
-      <Img src="avatar.jpg" alt="Image" />
+      <Img src="raju.jpg" alt="Image of myself" />
       <FigCaption>
         <span>
           Prioritizing my <span>unjustifiable</span> Learning & growth

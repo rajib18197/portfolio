@@ -35,18 +35,3 @@ export default function App() {
     </>
   );
 }
-
-// export default function App() {
-//   return (
-//     <div>
-//       <NavigationProvider>
-//         <SideNav />
-//         <Route index={true} element={Project} />
-//         <Route path="/project" element={Project} />
-//         <Route path="/sports" element={Sports} />
-//         <Route path="/table" element={Table} />
-//         <Route path="/dashboard" element={Dashboard} />
-//       </NavigationProvider>
-//     </div>
-//   );
-// }

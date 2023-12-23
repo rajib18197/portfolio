@@ -85,8 +85,7 @@ const Secondary = styled(Name)`
 export default function Intro() {
   return (
     <StyledIntro>
-      {/* <Name>🏝️ Hi I'm Virat kohli 🧳</Name> */}
-      <Name>📚 Hi I'm Virat kohli 📈</Name>
+      <Name>📚 Hi I'm Rajib Das 📈</Name>
       <Secondary>
         Frontend Engineer
         <Social />
