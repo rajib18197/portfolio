@@ -37,19 +37,19 @@ const ImageBox = styled.div`
 
   & img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
     object-position: center;
-    outline: 3px solid #613131;
-    outline-offset: 2px;
-    box-shadow: 0 0 0 transparent, 0 0 0 transparent,
-      0 0 5rem rgba(234, 242, 255, 0.3);
+    /* outline: 3px solid #613131;
+    outline-offset: 2px; */
+    /* box-shadow: 0 0 0 transparent, 0 0 0 transparent,
+      0 0 5rem rgba(234, 242, 255, 0.3); */
     border-radius: 4px;
     display: block;
     transition: all 0.3s ease-in-out;
     outline: none;
     border-color: #a033fa;
-    box-shadow: 0 0 10px #a033fa;
+    box-shadow: 0 0 8px #a033fa;
 
     @media (max-width: 59em) {
       height: 30rem;
@@ -172,12 +172,12 @@ const CaseStudy = styled(NavLink)`
 `;
 
 export default function ProjectBox({ project }) {
-  const { id, name, image, overview, liveLink, sourceCode } = project;
+  const { id, name, images, overview, liveLink, sourceCode } = project;
   return (
     <StyledProject>
       <Figure>
         <ImageBox>
-          <img src={image} alt={name} />
+          <img src={images.cover} alt={name} />
         </ImageBox>
 
         <OverView>
@@ -192,13 +192,13 @@ export default function ProjectBox({ project }) {
 
         <ActionBox>
           <ViewLink>
-            <LiveLink href={liveLink}>
+            <LiveLink href={liveLink} target="_blank">
               {"<"}LiveLink{"/>"}
             </LiveLink>
           </ViewLink>
 
           <ViewLink>
-            <SourceLink href={sourceCode}>
+            <SourceLink href={sourceCode} target="_blank">
               {"<"}SourceCode{"/>"}
             </SourceLink>
           </ViewLink>
