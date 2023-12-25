@@ -62,7 +62,7 @@ const SkillIntro = styled.p`
 
 const ButtonContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 `;
 
@@ -104,11 +104,10 @@ export default function Skills() {
       <ButtonContainer>
         <Button>JavaScript</Button>
         <Button>React JS</Button>
-        <Button>Redux | RTK</Button>
+        <Button>Redux(+ Toolkit & Toolkit query)</Button>
         <Button>React Query</Button>
         <Button>Styled Components</Button>
         <Button>Tailwind CSS</Button>
-        <Button>Algorithms</Button>
       </ButtonContainer>
     </Skill>
   );
