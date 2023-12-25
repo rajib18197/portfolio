@@ -31,8 +31,8 @@ const StyledSampleWork = styled.div`
   &::before {
     width: 35%;
     padding-bottom: 35%;
-    background-color: #8048e729;
-    background-color: #d0cbff44;
+    background-color: #ecacff49;
+    /* background-color: #d1cbff84; */
     z-index: -2;
   }
   &::after {
@@ -75,13 +75,14 @@ const StyledSampleWork = styled.div`
 
 const ProjectImage = styled.img`
   display: block;
-  max-width: 100%;
   max-width: 75%;
-  /* height: 90%; */
   object-fit: cover;
-  border-radius: 8px;
+  filter: drop-shadow(0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff);
+  /* border: 20px solid #faf0fa; */
+  outline: 25px solid #faf0fa;
+  z-index: 1000;
 
-  z-index: -3;
+  /* z-index: -3; */
   box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
 
   &:last-child {
@@ -104,27 +105,10 @@ const ProjectImage = styled.img`
 `;
 
 export default function SampleWork() {
-  const { data: projects, isLoading, isError, error } = useHttp(getProjects);
-
-  if (isLoading) return <h1>Loading</h1>;
-
-  if (!isLoading && isError) return <h2>{error.message}</h2>;
-
-  console.log(projects, isLoading);
-  const imgs = projects.filter(
-    (pro) =>
-      pro.name.toLowerCase().includes("enterprise") ||
-      pro.name.toLowerCase().includes("eatrovion")
-  );
-
-  const cover1 = imgs[0].images.cover;
-  const cover2 = imgs[1].images.cover;
-
   return (
     <StyledSampleWork>
-      <ProjectImage src={cover1} alt={imgs[0].name} />
-      <ProjectImage src={cover2} alt={imgs[1].name} />
-      {/* <ProjectImage src="cabin-001.jpg" /> */}
+      <ProjectImage src="enterprise-coverr.png" alt="Sample Work 1" />
+      <ProjectImage src="eatrovion-cover.png" alt="Sample Work 2" />
     </StyledSampleWork>
   );
 }

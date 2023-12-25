@@ -26,7 +26,7 @@ const Layout = styled.div`
 export default function Home() {
   return (
     <Layout>
-      <Heading>Onboarding in Seconds.</Heading>
+      <Heading>Onboarding in Seconds!</Heading>
       <Description />
       <Skills />
       <Action />

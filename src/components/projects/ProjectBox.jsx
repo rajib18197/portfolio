@@ -35,12 +35,12 @@ const ImageBox = styled.div`
   & img {
     width: 100%;
     /* height: 100%; */
+    outline: 5px solid #fdf8f4;
     object-fit: cover;
     object-position: center;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     display: block;
     transition: all 0.3s ease-in-out;
-    outline: none;
     border-color: #a033fa;
     box-shadow: 0 0 8px #a033fa;
 

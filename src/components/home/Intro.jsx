@@ -4,7 +4,7 @@ import Social from "../../ui/Social";
 const StyledIntro = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   height: 100%;
   grid-column: 2 / -1;
   grid-row: 1 / span 1;
@@ -33,6 +33,9 @@ const Name = styled.h1`
   font-size: 7rem;
   color: white;
   word-spacing: 3px;
+  display: flex;
+  gap: 3rem;
+  /* justify-content: space-between; */
 
   text-transform: uppercase;
   font-weight: 400;
@@ -53,7 +56,7 @@ const Name = styled.h1`
 `;
 const Secondary = styled(Name)`
   display: grid;
-  grid-template-columns: 1fr 80px;
+  grid-template-columns: max-content 60px;
   gap: 1.6rem;
   align-items: center;
   position: relative;
@@ -62,8 +65,7 @@ const Secondary = styled(Name)`
     content: "";
     display: block;
     height: 4px;
-    background-color: #5f5de1;
-    transform: translateX(-45px);
+    background-color: #212133;
   }
 
   @media (max-width: 70em) {
@@ -78,7 +80,9 @@ const Secondary = styled(Name)`
 export default function Intro() {
   return (
     <StyledIntro>
-      <Name>📚 Hi I'm Rajib Das 📈</Name>
+      <Name>
+        <span>📚</span> Hi I'm Rajib Das <span>📈</span>
+      </Name>
       <Secondary>Frontend Engineer</Secondary>
     </StyledIntro>
   );

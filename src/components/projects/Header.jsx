@@ -22,12 +22,18 @@ const Heading = styled.h1`
   font-weight: 400;
   color: #121718;
   line-height: 1;
+  /* 
+  & span {
+    text-transform: lowercase;
+    font-size: 4rem;
+    font-weight: 600;
+  } */
 `;
 
 export default function Header() {
   return (
     <StyledHeader>
-      <Heading>The Personal API'S</Heading>
+      <Heading>Personal APIs Revealed!</Heading>
     </StyledHeader>
   );
 }

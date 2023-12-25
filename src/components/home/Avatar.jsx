@@ -70,17 +70,19 @@ const FigCaption = styled.figcaption`
 const Img = styled.img`
   max-width: 100%;
   height: 100%;
-  border-radius: 50px;
-  border: 3px solid var(--color-silver-700);
+  border-radius: 40px;
   object-fit: cover;
+  border: 4px solid #49131e;
+
+  /* background-image: conic-gradient(#213, #112 50%, #213),
+    conic-gradient(transparent 20%, #08f, #f03);
+
+  background-position: center center;
+  background-repeat: no-repeat; */
 
   @media (max-width: 59em) {
     width: 100%;
   }
-
-  /* @media (max-width: 45em) {
-    height: 50;
-  } */
 `;
 
 export default function Avatar() {
