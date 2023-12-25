@@ -172,12 +172,13 @@ const CaseStudy = styled(NavLink)`
 `;
 
 export default function ProjectBox({ project }) {
+  console.log(project);
   const { id, name, images, overview, liveLink, sourceCode } = project;
   return (
     <StyledProject>
       <Figure>
         <ImageBox>
-          <img src={images.cover} alt={name} />
+          <img src={`/${images.cover}`} alt={name} />
         </ImageBox>
 
         <OverView>

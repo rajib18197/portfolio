@@ -22,8 +22,7 @@ const Nav = styled.nav`
   left: 0%;
   transform: translate(0, -50%);
   background-color: rgba(255, 255, 255, 0.2);
-  /* backdrop-filter: blur(10px); */
-  /* background-image: linear-gradient(260deg, #ff4f8b 60%, #dff1ff 40%); */
+
   background-image: linear-gradient(#ad9bfd, #d0adfd);
   /* backdrop-filter: blur(30px); */
   color: white;
@@ -45,11 +44,6 @@ const StyledNavLink = styled(NavLink)`
     gap: 0.5rem;
 
     color: var(--color-grey-600);
-    // background-color: var(--color-grey-200);
-
-    // border-radius: 4px;
-    // border-left: 4px solid var(--color-brand-600);
-    // border-bottom-left-radius: 100px;
 
     font-size: 1.2rem;
     font-weight: 600;
@@ -65,18 +59,12 @@ const StyledNavLink = styled(NavLink)`
   &.active:visited {
     color: var(--color-grey-800);
     background-color: var(--color-grey-200);
-    /* background-color: var(--color-green-700); */
-    /* color: var(--color-grey-100); */
-    // border-radius: var(--border-radius-sm);
   }
 
   & svg {
     width: 2.1rem;
     height: 2.1rem;
     color: var(--color-brand-600);
-    // border-radius: 50%;
-    // padding: 2rem;
-    /* background-color: var(--color-brand-600); */
     transition: all 0.3s;
   }
 
@@ -88,33 +76,18 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-function MainNav() {
+function MainNav({ options }) {
   return (
     <Nav>
       <NavList>
-        <li>
-          <StyledNavLink to="/home">
-            <HiOutlineHome />
-            <span>Home</span>
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/projects">
-            <HiOutlineCalendarDays />
-            <span>Projects</span>
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/about">
-            <HiOutlineHomeModern />
-            <span>About</span>
-          </StyledNavLink>
-        </li>
-        {/* <li>
-          <StyledNavLink to="/projects/:id">
-            <HiOutlineUsers />
-          </StyledNavLink>
-        </li> */}
+        {options.map((option) => (
+          <li key={option.label}>
+            <StyledNavLink to={option.path}>
+              {option.icon}
+              <span>{option.label}</span>
+            </StyledNavLink>
+          </li>
+        ))}
       </NavList>
     </Nav>
   );

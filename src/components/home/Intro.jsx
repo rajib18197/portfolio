@@ -19,6 +19,7 @@ const StyledIntro = styled.div`
   @media (max-width: 59em) {
     width: 100%;
     text-align: center;
+    justify-self: start;
   }
 
   @media (max-width: 45em) {
@@ -31,8 +32,6 @@ const Name = styled.h1`
   font-family: "Megrim", sans-serif;
   font-size: 7rem;
   color: white;
-
-  position: relative;
   word-spacing: 3px;
 
   text-transform: uppercase;
@@ -49,23 +48,17 @@ const Name = styled.h1`
   }
 
   @media (max-width: 59em) {
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-    height: 100%;
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 `;
 const Secondary = styled(Name)`
-  /* display: grid;
-  grid-template-columns: 1fr 80px; */
-  /* background-color: oldlace; */
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 1.6rem;
   align-items: center;
-  /* position: relative; */
+  position: relative;
 
-  /* &::after {
+  &::after {
     content: "";
     display: block;
     height: 4px;
@@ -79,17 +72,14 @@ const Secondary = styled(Name)`
       display: none;
     }
     grid-template-columns: 1fr;
-  } */
+  }
 `;
 
 export default function Intro() {
   return (
     <StyledIntro>
       <Name>📚 Hi I'm Rajib Das 📈</Name>
-      <Secondary>
-        Frontend Engineer
-        <Social />
-      </Secondary>
+      <Secondary>Frontend Engineer</Secondary>
     </StyledIntro>
   );
 }

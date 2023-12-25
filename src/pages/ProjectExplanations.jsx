@@ -81,6 +81,7 @@ export default function ProjectExplantions() {
   if (Object.keys(project).length === 0) return <h2>Loading</h2>;
 
   console.log(project);
+  console.log(otherProjects);
 
   return (
     <>
@@ -90,12 +91,10 @@ export default function ProjectExplantions() {
       <Other>
         <Heading>Other Projects</Heading>
         <Link>
-          {/* <h2>Other Projects</h2> */}
           {otherProjects.map((project) => {
             if (Number(project.id) === Number(id)) return null;
             return <ProjectBox key={project.name} project={project} />;
           })}
-          <Social variation="vertical" />
         </Link>
         <Greeting>
           <FaHeart /> Thank You So much for reading <FaHeart />

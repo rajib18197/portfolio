@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { getProjects } from "../../services/apiProjects";
+import { useHttp } from "../../hooks/useHttp";
 
 const StyledSampleWork = styled.div`
   grid-column: 2 / -1;
@@ -102,10 +104,27 @@ const ProjectImage = styled.img`
 `;
 
 export default function SampleWork() {
+  const { data: projects, isLoading, isError, error } = useHttp(getProjects);
+
+  if (isLoading) return <h1>Loading</h1>;
+
+  if (!isLoading && isError) return <h2>{error.message}</h2>;
+
+  console.log(projects);
+  const imgs = projects.filter(
+    (pro) =>
+      pro.name.toLowerCase().includes("enterprise") ||
+      pro.name.toLowerCase().includes("eatrovion")
+  );
+
+  const cover1 = imgs[0].images.cover;
+  const cover2 = imgs[1].images.cover;
+
   return (
     <StyledSampleWork>
-      <ProjectImage src="cabin-001.jpg" />
-      <ProjectImage src="cabin-001.jpg" />
+      <ProjectImage src={cover1} alt={imgs[0].name} />
+      <ProjectImage src={cover2} alt={imgs[1].name} />
+      {/* <ProjectImage src="cabin-001.jpg" /> */}
     </StyledSampleWork>
   );
 }

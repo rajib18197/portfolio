@@ -1,24 +1,85 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { BiLogoGmail } from "react-icons/bi";
+import { SiLeetcode } from "react-icons/si";
 
 import styled, { css } from "styled-components";
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
+  padding: 0 0 0 0;
+  padding: 1rem 0;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(#ad9bfd, #d0adfd);
+  /* backdrop-filter: blur(30px); */
+  color: white;
+  z-index: 2000;
+`;
+
+const NavList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+`;
+
+const StyledNavLink = styled.a`
+  &:link,
+  &:visited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    color: var(--color-grey-600);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.4rem;
+    /* padding: 1.2rem 1.4rem; */
+    transition: all 0.3s;
+  }
+
+  /* This works because react-router places the active class on the active NavLink */
+  &:hover,
+  &:active,
+  &.active:link,
+  &.active:visited {
+    color: var(--color-grey-800);
+    background-color: var(--color-grey-200);
+  }
+
+  & svg {
+    width: 2.1rem;
+    height: 2.1rem;
+    color: var(--color-brand-600);
+    transition: all 0.3s;
+  }
+
+  &:hover svg,
+  &:active svg,
+  &.active:link svg,
+  &.active:visited svg {
+    color: var(--color-brand-600);
+  }
+`;
 
 const StyledSocial = styled.div`
   display: flex;
-  /* ${(props) =>
-    props.variation === "vertical"
-      ? css`
-          flex-direction: column;
-          gap: 1.6rem;
-        `
-      : css`
-          justify-content: center;
-          gap: 3rem;
-        `} */
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  transform: translate(-20%, 0);
 
   justify-content: center;
-  gap: 3rem;
-  background-color: #fa6c38;
+  gap: 1rem;
+  background-color: #48c448;
   padding: 0.5rem;
   border-radius: 4px;
   width: max-content;
@@ -27,8 +88,8 @@ const StyledSocial = styled.div`
 `;
 
 const Link = styled.a`
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: #191630;
   padding: 1rem;
   /* transform: rotate(221deg); */
@@ -42,27 +103,38 @@ const Link = styled.a`
     /* position: relative; */
     width: 3rem;
     height: 3rem;
-    /* display: inline-block; */
-    /* margin-right: 2rem; */
     fill: #eae5ff;
     transition: all 0.3s;
-    /* transform: rotate(-221deg); */
   }
 `;
 
-export default function Social({ variation }) {
+export default function Social({ options }) {
   return (
-    <StyledSocial variation={variation}>
-      <Link href="#">
+    <Nav>
+      <NavList>
+        {options.map((option) => (
+          <li key={option.id}>
+            <StyledNavLink href={option.href} target="_blank">
+              {option.icon}
+            </StyledNavLink>
+          </li>
+        ))}
+      </NavList>
+    </Nav>
+  );
+}
+
+{
+  /* <StyledSocial variation={variation}>
+      <Link href="https://github.com/rajib18197" target="_blank">
         <FaGithub />
       </Link>
-      <Link href="#">
+      <Link href="https://www.linkedin.com/in/rajuzest/" target="_blank">
         <FaLinkedin />
       </Link>
 
-      {/* <Link href="#">
-        <BiLogoGmail />
-      </Link> */}
-    </StyledSocial>
-  );
+      <Link href="https://www.linkedin.com/in/rajuzest/" target="_blank">
+        <SiLeetcode />
+      </Link>
+    </StyledSocial> */
 }

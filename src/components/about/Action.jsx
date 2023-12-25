@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Social from "../../ui/Social";
 
 const StyledAction = styled.div`
   display: flex;
@@ -73,7 +72,6 @@ export default function Action() {
           looking for a full time role where I can provide values.
         </Heading6>
       </Container>
-      <Social />
     </StyledAction>
   );
 }
