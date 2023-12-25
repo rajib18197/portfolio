@@ -67,9 +67,9 @@ export default function Action() {
           <span>S</span>
         </Heading3>
         <Heading4>ounds great?</Heading4>
-        <Heading5>I'M</Heading5>
+        <Heading5>If</Heading5>
         <Heading6>
-          looking for a full time role where I can provide values.
+          you are looking for a developer, feel free to reach out.
         </Heading6>
       </Container>
     </StyledAction>
