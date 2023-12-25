@@ -29,14 +29,16 @@ const FigCaption = styled.figcaption`
   text-transform: capitalize;
   width: 110%;
   font-weight: 600;
+  color: white;
+  /* color: #0004ff; */
+  text-shadow: 0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff;
 
-  background-color: #111827;
+  background-color: #1a1d17;
   /* border-left: 2px solid #121212; */
   border-radius: 3px;
   padding: 1rem;
-  color: #ffffff;
   & span {
-    color: #d0cbff;
+    /* color: #d0cbff; */
   }
 
   & > span {
