@@ -9,13 +9,11 @@ const Figure = styled.figure`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: auto auto; */
   column-gap: 2rem;
   height: 20rem;
   row-gap: 1rem;
   padding: 0.6rem;
   background-color: #ede9fe;
-  /* background-color: #c3b6ff; */
   color: #241d25;
   border-radius: 6px;
 
@@ -31,19 +29,14 @@ const Figure = styled.figure`
 
 const ImageBox = styled.div`
   position: relative;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 1;
   grid-column: 1 / 2;
-  /* background-color: orangered; */
 
   & img {
     width: 100%;
     /* height: 100%; */
     object-fit: cover;
     object-position: center;
-    /* outline: 3px solid #613131;
-    outline-offset: 2px; */
-    /* box-shadow: 0 0 0 transparent, 0 0 0 transparent,
-      0 0 5rem rgba(234, 242, 255, 0.3); */
     border-radius: 4px;
     display: block;
     transition: all 0.3s ease-in-out;
@@ -90,9 +83,6 @@ const Name = styled.div`
   width: max-content;
   padding: 0.6rem 0.6rem;
   margin-bottom: 0.9rem;
-  /* border-inline: 0.3rem solid #f1eeff; */
-  /* transform: skewX(-20deg); */
-  /* background-image: linear-gradient(to right, #85f8d2, #8048e7); */
   background-color: #e879f9;
 
   & > h3 {
@@ -116,14 +106,15 @@ const ActionBox = styled.div`
   display: flex;
   gap: 0.8rem;
   align-items: center;
+  justify-content: space-between;
   font-size: 1.4rem;
-  grid-column: 2 / -1;
+  grid-column: 1 / -1;
   grid-row: 2 / span 1;
-  background-color: #341747;
+  background-color: #2e2057;
   color: white;
   width: 100%;
-  transform: scale(1.2) translate(-8px, -4px);
-  padding: 1rem;
+  /* transform: scale(1.2) translate(-8px, -4px); */
+  padding: 0.8rem;
   justify-self: center;
   align-self: center;
 
@@ -146,29 +137,9 @@ const ViewLink = styled.div`
 const Link = styled.a`
   display: inline-block;
   color: #e8d7f7;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-`;
-
-const LiveLink = styled(Link)`
-  /* color: #fbdb89; */
-`;
-
-const SourceLink = styled(Link)`
-  color: #e2f2fc;
-`;
-
-const CaseStudy = styled(NavLink)`
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-  width: max-content;
-  /* padding: 0.6rem 1.5rem; */
-  color: #d365ff;
-  /* background-color: #ebdc15; */
-  border-radius: 0.3rem;
-  cursor: pointer;
 `;
 
 export default function ProjectBox({ project }) {
@@ -193,20 +164,22 @@ export default function ProjectBox({ project }) {
 
         <ActionBox>
           <ViewLink>
-            <LiveLink href={liveLink} target="_blank">
+            <Link href={liveLink} target="_blank">
               {"<"}LiveLink{"/>"}
-            </LiveLink>
+            </Link>
           </ViewLink>
 
           <ViewLink>
-            <SourceLink href={sourceCode} target="_blank">
+            <Link href={sourceCode} target="_blank">
               {"<"}SourceCode{"/>"}
-            </SourceLink>
+            </Link>
           </ViewLink>
 
-          <CaseStudy to={`/projects/${id}`}>
-            {"<"}CaseStudy{"/>"}
-          </CaseStudy>
+          <ViewLink>
+            <NavLink to={`/projects/${id}`}>
+              {"<"}CaseStudy{"/>"}
+            </NavLink>
+          </ViewLink>
         </ActionBox>
       </Figure>
     </StyledProject>

@@ -123,18 +123,3 @@ export default function Social({ options }) {
     </Nav>
   );
 }
-
-{
-  /* <StyledSocial variation={variation}>
-      <Link href="https://github.com/rajib18197" target="_blank">
-        <FaGithub />
-      </Link>
-      <Link href="https://www.linkedin.com/in/rajuzest/" target="_blank">
-        <FaLinkedin />
-      </Link>
-
-      <Link href="https://www.linkedin.com/in/rajuzest/" target="_blank">
-        <SiLeetcode />
-      </Link>
-    </StyledSocial> */
-}
