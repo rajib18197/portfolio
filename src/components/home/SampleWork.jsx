@@ -110,7 +110,7 @@ export default function SampleWork() {
 
   if (!isLoading && isError) return <h2>{error.message}</h2>;
 
-  console.log(projects);
+  console.log(projects, isLoading);
   const imgs = projects.filter(
     (pro) =>
       pro.name.toLowerCase().includes("enterprise") ||

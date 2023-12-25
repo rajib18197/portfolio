@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 
 export function useHttp(callback, id) {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [error, setError] = useState(null);
 
+  console.log(id, callback);
+
   useEffect(
     function () {
+      console.log(id);
       async function getData() {
         try {
           setIsLoading(true);
@@ -15,6 +18,7 @@ export function useHttp(callback, id) {
           setError(null);
 
           const results = await callback(id);
+          console.log(results);
 
           setData(results);
           setIsLoading(false);
