@@ -35,11 +35,23 @@ const Name = styled.h1`
   word-spacing: 3px;
   display: flex;
   gap: 3rem;
+  font-weight: 400;
+  /* background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text; */
+  /* background-clip: text; */
+  color: #121212;
+  /* background: linear-gradient(
+    to right,
+    #dd2476,
+    #dd2476
+  );
+
+  background-clip: text;
+  color: transparent; */
   /* justify-content: space-between; */
 
   text-transform: uppercase;
   font-weight: 400;
-  color: #121718;
   line-height: 1;
 
   @media (max-width: 70em) {
@@ -52,6 +64,10 @@ const Name = styled.h1`
 
   @media (max-width: 59em) {
     font-size: 4.5rem;
+  }
+
+  & span {
+    color: white;
   }
 `;
 const Secondary = styled(Name)`
@@ -80,9 +96,10 @@ const Secondary = styled(Name)`
 export default function Intro() {
   return (
     <StyledIntro>
-      <Name>
-        <span>📚</span> Hi I'm Rajib Das <span>📈</span>
-      </Name>
+      {/* <Name>
+        <span>📚</span> Hi, I'm Rajib! <span>📈</span>
+      </Name> */}
+      <Name>Hi, I'm Rajib!</Name>
       <Secondary>Frontend Engineer</Secondary>
     </StyledIntro>
   );

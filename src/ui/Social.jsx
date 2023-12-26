@@ -7,16 +7,12 @@ const Nav = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   /* height: 100%; */
-  padding: 0 0 0 0;
-  padding: 1rem 0;
+  padding: 1rem 0.6rem;
   position: fixed;
   top: 50%;
   right: 0%;
   transform: translate(0, -50%);
-  background-color: rgba(255, 255, 255, 0.2);
-
-  background-image: linear-gradient(#ad9bfd, #d0adfd);
-  /* backdrop-filter: blur(30px); */
+  background-color: #fbf9fc;
   color: white;
   z-index: 2000;
 `;
@@ -36,7 +32,7 @@ const StyledNavLink = styled.a`
     justify-content: center;
     gap: 0.5rem;
 
-    color: var(--color-grey-600);
+    color: orangered;
 
     font-size: 1.2rem;
     font-weight: 600;
@@ -51,13 +47,14 @@ const StyledNavLink = styled.a`
   &.active:link,
   &.active:visited {
     color: var(--color-grey-800);
-    background-color: var(--color-grey-200);
+    background-color: var(--color-grey-300);
   }
 
   & svg {
     width: 2.1rem;
     height: 2.1rem;
     color: var(--color-brand-600);
+    color: #767676;
     transition: all 0.3s;
   }
 

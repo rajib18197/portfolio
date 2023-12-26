@@ -31,15 +31,13 @@ const StyledSampleWork = styled.div`
   &::before {
     width: 35%;
     padding-bottom: 35%;
-    background-color: #ecacff49;
-    /* background-color: #d1cbff84; */
+    background-color: #fdf2e9;
     z-index: -2;
   }
   &::after {
     width: 25%;
     padding-bottom: 25%;
-    background-color: #95c0b228;
-    background-color: #efb9ff;
+    background-color: #ffede0;
 
     z-index: -1;
   }
@@ -53,15 +51,11 @@ const StyledSampleWork = styled.div`
     &::before {
       width: 35%;
       padding-bottom: 35%;
-      background-color: #8048e729;
-      background-color: #3a29d6b0;
       z-index: -2;
     }
     &::after {
       width: 25%;
       padding-bottom: 25%;
-      background-color: #95c0b228;
-      background-color: #efb9ff;
 
       z-index: -1;
     }
@@ -79,7 +73,7 @@ const ProjectImage = styled.img`
   object-fit: cover;
   filter: drop-shadow(0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff);
   /* border: 20px solid #faf0fa; */
-  outline: 25px solid #faf0fa;
+  outline: 25px solid #f4d0ff;
   z-index: 1000;
 
   /* z-index: -3; */

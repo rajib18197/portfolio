@@ -23,14 +23,14 @@ const Paragraph = styled.p`
   /* font-family: system-ui; */
   line-height: 1.9;
   hyphens: none;
+  color: #444;
   font-weight: 400;
-  color: rgb(20, 23, 26);
   /* text-align: justify; */
 
   &:last-child {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0rem;
   }
 `;
 

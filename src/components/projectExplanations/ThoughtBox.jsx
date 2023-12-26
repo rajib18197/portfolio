@@ -19,7 +19,7 @@ const Text = styled.p`
   /* font-weight: 500; */
   line-height: 1.9;
   /* box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.15); */
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.09);
   border-left: 4px solid rgb(115, 43, 247);
 `;
 

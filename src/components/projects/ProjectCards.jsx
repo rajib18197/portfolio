@@ -5,7 +5,7 @@ import { useHttp } from "../../hooks/useHttp";
 export default function ProjectCards() {
   const { data: projects, isLoading, isError, error } = useHttp(getProjects);
 
-  if (isLoading) return <h1>Loading</h1>;
+  if (isLoading) return <h1 style={{ color: "#121212" }}>Loading...</h1>;
 
   if (!isLoading && isError) return <h2>{error.message}</h2>;
 

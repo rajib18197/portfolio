@@ -12,7 +12,7 @@ const Container = styled.div`
   grid-template-columns: max-content max-content max-content max-content;
   grid-template-rows: min-content min-content min-content;
   justify-content: center;
-  font-family: "Megrim", sans-serif;
+  /* font-family: "Megrim", sans-serif; */
 
   color: #444;
   font-size: 1.8rem;
@@ -28,9 +28,10 @@ const Heading3 = styled.h5`
 
   grid-column: 1 / span 1;
   grid-row: 1 / span 3;
-  background-color: white;
+  background-color: #e4e4e4;
   font-size: 4rem;
   text-transform: uppercase;
+  font-weight: 400;
 
   & span {
     vertical-align: top;
@@ -43,20 +44,23 @@ const Heading4 = styled.h5`
   padding: 0.1rem;
   grid-column: 2 / span 2;
   grid-row: 1 / span 1;
-  background-color: white;
+  background-color: #e4e4e4;
+  font-weight: 400;
 `;
 
 const Heading5 = styled.h5`
   grid-column: 3 / span 1;
   grid-row: 2 / span 1;
-  background-color: white;
+  background-color: #e4e4e4;
+  font-weight: 400;
 `;
 
 const Heading6 = styled.h5`
   padding: 0.1rem;
   grid-column: 2 / -1;
   grid-row: 3 / span 1;
-  background-color: white;
+  background-color: #e4e4e4;
+  font-weight: 400;
 `;
 
 export default function Action() {
@@ -66,7 +70,7 @@ export default function Action() {
         <Heading3>
           <span>S</span>
         </Heading3>
-        <Heading4>ounds great?</Heading4>
+        <Heading4>ounds good?</Heading4>
         <Heading5>If</Heading5>
         <Heading6>
           you are looking for a developer, feel free to reach out.

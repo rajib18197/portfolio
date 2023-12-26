@@ -126,7 +126,8 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     color: var(--color-grey-100);
     background-color: var(--color-grey-800);
-    /* background-image: linear-gradient(#ff4f8b, #956dca); */
+    background-image: linear-gradient(to right, #ff4f8b, #956dca);
+    /* background-color: #6A5ACD; */
   
   
     transition: color 0.3s, background-color 0.3s;

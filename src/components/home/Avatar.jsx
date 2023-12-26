@@ -19,27 +19,24 @@ const StyledAvatar = styled.div`
 `;
 
 const FigCaption = styled.figcaption`
-  font-family: "Megrim", sans-serif;
-  letter-spacing: 1px;
+  font-family: "poppins", sans-serif;
   position: absolute;
   bottom: 5rem;
   left: -5%;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-align: center;
   text-transform: capitalize;
   width: 110%;
-  font-weight: 600;
+  font-weight: 400;
+  letter-spacing: 0.75px;
   color: white;
   /* color: #0004ff; */
-  text-shadow: 0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff;
+  /* text-shadow: 0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff; */
 
-  background-color: #1a1d17;
+  background-color: #181718;
   /* border-left: 2px solid #121212; */
   border-radius: 3px;
-  padding: 1rem;
-  & span {
-    /* color: #d0cbff; */
-  }
+  padding: 1rem 0.4rem;
 
   & > span {
     & span {
@@ -70,16 +67,17 @@ const FigCaption = styled.figcaption`
 const Img = styled.img`
   max-width: 100%;
   height: 100%;
-  border-radius: 40px;
+  border-radius: 20px;
   object-fit: cover;
-  border: 4px solid #49131e;
-
+  /* border: 4px solid #f03; */
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+  background-blend-mode: screen;
   /* background-image: conic-gradient(#213, #112 50%, #213),
     conic-gradient(transparent 20%, #08f, #f03);
 
   background-position: center center;
   background-repeat: no-repeat; */
-
   @media (max-width: 59em) {
     width: 100%;
   }
@@ -91,7 +89,7 @@ export default function Avatar() {
       <Img src="raju.jpg" alt="Image of myself" />
       <FigCaption>
         <span>
-          Prioritizing my <span>unjustifiable</span> Learning & growth
+          📚 Prioritizing my <span>unjustifiable</span> Learning & growth 📈
         </span>
       </FigCaption>
     </StyledAvatar>

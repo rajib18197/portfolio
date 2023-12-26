@@ -23,7 +23,8 @@ const Nav = styled.nav`
   transform: translate(0, -50%);
   background-color: rgba(255, 255, 255, 0.2);
 
-  background-image: linear-gradient(#ad9bfd, #d0adfd);
+  /* background-image: linear-gradient(#ad9bfd, #d0adfd); */
+  background-color: #221829;
   /* backdrop-filter: blur(30px); */
   color: white;
   z-index: 2000;
@@ -43,7 +44,7 @@ const StyledNavLink = styled(NavLink)`
     justify-content: center;
     gap: 0.5rem;
 
-    color: var(--color-grey-600);
+    /* color: var(--color-grey-600); */
 
     font-size: 1.2rem;
     font-weight: 600;
@@ -65,6 +66,7 @@ const StyledNavLink = styled(NavLink)`
     width: 2.1rem;
     height: 2.1rem;
     color: var(--color-brand-600);
+    color: orangered;
     transition: all 0.3s;
   }
 
@@ -72,7 +74,7 @@ const StyledNavLink = styled(NavLink)`
   &:active svg,
   &.active:link svg,
   &.active:visited svg {
-    color: var(--color-brand-600);
+    /* color: var(--color-brand-600); */
   }
 `;
 

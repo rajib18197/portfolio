@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 const PageContainer = styled.div`
   background-color: rgb(241, 207, 252);
+  background-color: #ffffff;
   width: 125rem;
   padding: 2rem;
   border-radius: 10px;

@@ -14,6 +14,7 @@ const Figure = styled.figure`
   row-gap: 1rem;
   padding: 0.6rem;
   background-color: #ede9fe;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   color: #241d25;
   border-radius: 6px;
 
@@ -83,7 +84,7 @@ const Name = styled.div`
   width: max-content;
   padding: 0.6rem 0.6rem;
   margin-bottom: 0.9rem;
-  background-color: #e879f9;
+  /* background-color: #e879f9; */
 
   & > h3 {
     font-size: 1.6rem;
@@ -97,7 +98,7 @@ const Name = styled.div`
 const Description = styled.p`
   font-size: 1.4rem;
   line-height: 1.5;
-  /* text-align: justify; */
+  color: #444;
   letter-spacing: 0.75px;
   margin-bottom: 1.6rem;
 `;
@@ -111,12 +112,15 @@ const ActionBox = styled.div`
   grid-column: 1 / -1;
   grid-row: 2 / span 1;
   background-color: #2e2057;
+  background-color: #221829;
+
   color: white;
   width: 100%;
   /* transform: scale(1.2) translate(-8px, -4px); */
   padding: 0.8rem;
   justify-self: center;
   align-self: center;
+  border-radius: 2px;
 
   @media (max-width: 59em) {
     transform: scale(1) translate(-8px, -4px);
@@ -132,14 +136,28 @@ const ViewLink = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 0.2rem;
+
+  &:hover {
+    background-color: #d8d8d8;
+    color: #121212;
+  }
 `;
 
 const Link = styled.a`
   display: inline-block;
   color: #e8d7f7;
   font-size: 1.3rem;
-  font-weight: 600;
   letter-spacing: 0.5px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #d8d8d8;
+    color: #121212;
+  }
 `;
 
 export default function ProjectBox({ project }) {

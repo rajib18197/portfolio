@@ -9,7 +9,7 @@ const StyledChallengeBox = styled.div`
   border: 3rem solid #d5ebff;
   border-radius: 3px;
   line-height: 1.8;
-  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1); */
 `;
 
 export default function ChallengeBox({ challenge }) {
