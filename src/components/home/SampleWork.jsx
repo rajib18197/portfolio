@@ -73,7 +73,7 @@ const ProjectImage = styled.img`
   object-fit: cover;
   filter: drop-shadow(0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff);
   /* border: 20px solid #faf0fa; */
-  outline: 25px solid #f4d0ff;
+  outline: 25px solid #f3e2f8;
   z-index: 1000;
 
   /* z-index: -3; */
