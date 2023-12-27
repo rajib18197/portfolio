@@ -2,17 +2,19 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 
 import styled, { css } from "styled-components";
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* height: 100%; */
-  padding: 1rem 0.6rem;
+  padding: 1rem 0;
   position: fixed;
   top: 50%;
   right: 0%;
   transform: translate(0, -50%);
-  background-color: #fbf9fc;
+  background-color: #221829;
+
   color: white;
   z-index: 2000;
 `;
@@ -32,11 +34,11 @@ const StyledNavLink = styled.a`
     justify-content: center;
     gap: 0.5rem;
 
-    color: orangered;
+    color: #ffffff;
 
-    font-size: 1.2rem;
+    font-size: 1.08rem;
     font-weight: 600;
-    padding: 0.4rem;
+    padding: 0.35rem;
     /* padding: 1.2rem 1.4rem; */
     transition: all 0.3s;
   }
@@ -55,6 +57,7 @@ const StyledNavLink = styled.a`
     height: 2.1rem;
     color: var(--color-brand-600);
     color: #767676;
+    color: #8b54f1;
     transition: all 0.3s;
   }
 
@@ -77,7 +80,7 @@ const StyledSocial = styled.div`
   justify-content: center;
   gap: 1rem;
   background-color: #48c448;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 4px;
   width: max-content;
   margin: auto;
@@ -88,7 +91,7 @@ const Link = styled.a`
   width: 3.5rem;
   height: 3.5rem;
   background-color: #191630;
-  padding: 1rem;
+  /* padding: 1rem; */
   /* transform: rotate(221deg); */
   line-height: 1;
   transition: all 0.3s;
@@ -111,8 +114,13 @@ export default function Social({ options }) {
       <NavList>
         {options.map((option) => (
           <li key={option.id}>
-            <StyledNavLink href={option.href} target="_blank">
+            <StyledNavLink
+              href={option.href}
+              download={option.download}
+              target={`${option.download ? "" : "_blank"}`}
+            >
               {option.icon}
+              <span>{option.label}</span>
             </StyledNavLink>
           </li>
         ))}
