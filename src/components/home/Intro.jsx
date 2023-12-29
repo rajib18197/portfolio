@@ -99,7 +99,7 @@ export default function Intro() {
       {/* <Name>
         <span>📚</span> Hi, I'm Rajib! <span>📈</span>
       </Name> */}
-      <Name>Hi, I'm Rajib!</Name>
+      <Name>Hi, I'm Rajib Das!</Name>
       <Secondary>Frontend Engineer</Secondary>
     </StyledIntro>
   );
