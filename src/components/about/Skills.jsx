@@ -11,7 +11,7 @@ const Skill = styled.div`
   color: #f7b9b9;
   border-left: 4px solid #4e0c40;
   border-right: 4px solid #4e0c40;
-  padding: 2rem;
+  padding: 2.2rem 1rem 1rem 1rem;
   /* height: max-content; */
   /* width: max-content; */
   position: relative;
@@ -63,26 +63,20 @@ const SkillIntro = styled.p`
 const ButtonContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
 `;
 
 const Button = styled.button`
   border: none;
   outline: none;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  /* font-family: "Josefin Sans", sans-serif; */
-  /* font-weight: 700; */
-  /* width: max-content; */
-  text-align: center;
+  font-size: 1.5rem;
+  /* text-align: center; */
   display: inline-block;
-  padding: 1rem;
-  background-color: rgba(245, 21, 152, 0.9);
+  padding: 0.5rem;
   background-color: #f5f5f5;
-  color: #362828;
+  color: #333;
   border-radius: 4px;
-  /* border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%; */
 `;
 
 export default function Skills() {
@@ -98,13 +92,11 @@ export default function Skills() {
         for understanding what they do and what problems they solve to build
         something ecstatic.
       </SkillIntro>
-      {/* Front-end development with React and modern libraries course */}
-      {/* You want to truly master React development, including common libraries needed to build real-world apps: React Router, Redux, React Query, React Hooks Form, and many others */}
 
       <ButtonContainer>
         <Button>JavaScript</Button>
         <Button>React JS</Button>
-        <Button>Redux(+ Toolkit & Toolkit query)</Button>
+        <Button>Redux / RTK(+query)</Button>
         <Button>React Query</Button>
         <Button>Styled Components</Button>
         <Button>Tailwind CSS</Button>

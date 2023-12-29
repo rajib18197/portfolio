@@ -6,9 +6,6 @@ const StyledDescription = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.9rem;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
-  /* gap: 2rem; */
 
   @media (max-width: 59em) {
     grid-column: 1 / -1;
@@ -34,6 +31,14 @@ const Paragraph = styled.p`
   }
 `;
 
+const Quote = styled.p`
+  font-size: 1.5rem;
+  font-style: italic;
+  /* background-color: orangered; */
+  color: #444;
+  font-weight: 600;
+`;
+
 export default function Description() {
   return (
     <StyledDescription>
@@ -56,6 +61,11 @@ export default function Description() {
           prompt me LEARNING NOT GOING TO STOP.
         </span>
       </Paragraph>
+
+      <Quote>
+        You can be a masterpiece and a work in progress simultaneously - Sophia
+        Bush
+      </Quote>
     </StyledDescription>
   );
 }
