@@ -5,7 +5,7 @@ const StyledDescription = styled.div`
   grid-row: 2 / span 2;
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.9rem;
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
   /* gap: 2rem; */
@@ -21,7 +21,7 @@ const StyledDescription = styled.div`
 const Paragraph = styled.p`
   font-size: 1.6rem;
   /* font-family: system-ui; */
-  line-height: 1.9;
+  line-height: 1.8;
   hyphens: none;
   color: #444;
   font-weight: 400;
@@ -30,7 +30,7 @@ const Paragraph = styled.p`
   &:last-child {
     display: flex;
     flex-direction: column;
-    gap: 0rem;
+    gap: 0.4rem;
   }
 `;
 

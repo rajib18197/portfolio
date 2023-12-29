@@ -63,6 +63,15 @@ const Heading6 = styled.h5`
   font-weight: 400;
 `;
 
+const Contact = styled.div`
+  color: #444;
+  text-align: center;
+
+  & span {
+    font-weight: bold;
+  }
+`;
+
 export default function Action() {
   return (
     <StyledAction>
@@ -76,6 +85,12 @@ export default function Action() {
           you are looking for a developer, feel free to reach out.
         </Heading6>
       </Container>
+
+      <Contact>
+        <p>
+          Email: <span>rajib.rzb@gmail.com</span>{" "}
+        </p>
+      </Contact>
     </StyledAction>
   );
 }
