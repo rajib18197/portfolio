@@ -31,13 +31,15 @@ const StyledSampleWork = styled.div`
   &::before {
     width: 35%;
     padding-bottom: 35%;
-    background-color: #fdf2e9;
+    /* background-color: #fdf2e9; */
+    background-color: #ede9fe;
     z-index: -2;
   }
   &::after {
     width: 25%;
     padding-bottom: 25%;
-    background-color: #ffede0;
+    /* background-color: #ffede0; */
+    background-color: #e4e0f3;
 
     z-index: -1;
   }
@@ -73,7 +75,8 @@ const ProjectImage = styled.img`
   object-fit: cover;
   filter: drop-shadow(0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff);
   /* border: 20px solid #faf0fa; */
-  outline: 25px solid #f3e2f8;
+  outline: 20px solid #eb2f64;
+  outline: 20px solid #fbcfe8;
   z-index: 1000;
 
   /* z-index: -3; */
@@ -91,11 +94,6 @@ const ProjectImage = styled.img`
       justify-self: center;
     }
   }
-
-  /* @media (max-width: 59em) {
-    grid-column: 1 / -1;
-    grid-row: 2 / span 1;
-  } */
 `;
 
 export default function SampleWork() {

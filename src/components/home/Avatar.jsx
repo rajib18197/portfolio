@@ -33,7 +33,7 @@ const FigCaption = styled.figcaption`
   /* color: #0004ff; */
   /* text-shadow: 0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff; */
 
-  background-color: #181718;
+  background-color: #101d28;
   /* border-left: 2px solid #121212; */
   border-radius: 3px;
   padding: 1rem 0.4rem;
@@ -69,15 +69,11 @@ const Img = styled.img`
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
-  /* border: 4px solid #f03; */
+  /* border: 4px solid #eb2f64; */
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
   background-blend-mode: screen;
-  /* background-image: conic-gradient(#213, #112 50%, #213),
-    conic-gradient(transparent 20%, #08f, #f03);
 
-  background-position: center center;
-  background-repeat: no-repeat; */
   @media (max-width: 59em) {
     width: 100%;
   }
@@ -89,7 +85,7 @@ export default function Avatar() {
       <Img src="raju.jpg" alt="Image of myself" />
       <FigCaption>
         <span>
-          📚 Prioritizing my <span>unjustifiable</span> Learning & growth 📈
+          📚 Prioritizing my <span>unJustifiable</span> Learning & growth 📈
         </span>
       </FigCaption>
     </StyledAvatar>

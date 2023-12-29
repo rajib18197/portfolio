@@ -13,7 +13,7 @@ const Nav = styled.nav`
   top: 50%;
   right: 0%;
   transform: translate(0, -50%);
-  background-color: #221829;
+  background-color: #101d28;
 
   color: white;
   z-index: 2000;
@@ -36,7 +36,7 @@ const StyledNavLink = styled.a`
 
     color: #ffffff;
 
-    font-size: 1.08rem;
+    font-size: 1.04rem;
     font-weight: 600;
     padding: 0.35rem;
     /* padding: 1.2rem 1.4rem; */

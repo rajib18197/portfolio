@@ -21,11 +21,7 @@ const Nav = styled.nav`
   top: 50%;
   left: 0%;
   transform: translate(0, -50%);
-  background-color: rgba(255, 255, 255, 0.2);
-
-  /* background-image: linear-gradient(#ad9bfd, #d0adfd); */
-  background-color: #221829;
-  /* backdrop-filter: blur(30px); */
+  background-color: #101d28;
   color: white;
   z-index: 2000;
 `;
