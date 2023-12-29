@@ -67,8 +67,10 @@ const Contact = styled.div`
   color: #444;
   text-align: center;
 
-  & span {
+  & a {
     font-weight: bold;
+    text-decoration: underline;
+    color: #3b3be4;
   }
 `;
 
@@ -88,7 +90,13 @@ export default function Action() {
 
       <Contact>
         <p>
-          Email: <span>rajib.rzb@gmail.com</span>{" "}
+          Email: <a href="mailto:rajib.rzb@gmail.com">rajib.rzb@gmail.com</a>
+          {/* <a
+            href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=rajib.rzb@gmail.com&tf=1"
+            target="_blank"
+          >
+            rajib.rzb@gmail.com
+          </a> */}
         </p>
       </Contact>
     </StyledAction>
