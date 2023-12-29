@@ -111,8 +111,7 @@ const ActionBox = styled.div`
   font-size: 1.4rem;
   grid-column: 1 / -1;
   grid-row: 2 / span 1;
-  background-color: #2e2057;
-  background-color: #221829;
+  background-color: #101d28;
 
   color: white;
   width: 100%;
