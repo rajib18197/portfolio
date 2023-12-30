@@ -29,28 +29,21 @@ const StyledIntro = styled.div`
 `;
 
 const Name = styled.h1`
-  font-family: "Megrim", sans-serif;
-  font-size: 7rem;
+  font-family: "Lato", sans-serif;
+  font-size: 5.7rem;
   color: white;
   word-spacing: 3px;
   display: flex;
   gap: 3rem;
   font-weight: 400;
-  /* background-image: linear-gradient(to right, #7ed56f, #28b485);
-  -webkit-background-clip: text; */
-  /* background-clip: text; */
-  color: #121212;
-  /* background: linear-gradient(
-    to right,
-    #dd2476,
-    #dd2476
-  );
-
-  background-clip: text;
-  color: transparent; */
-  /* justify-content: space-between; */
-
+  color: #444;
   text-transform: uppercase;
+  /* background-image: linear-gradient(to right, #7ed56f, #28b485); */
+  /* background-image: linear-gradient(to right bottom, #ffb900, #ff7730); */
+  /* background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+  -webkit-background-clip: text;
+  color: transparent; */
+  letter-spacing: 0.2rem;
   font-weight: 400;
   line-height: 1;
 

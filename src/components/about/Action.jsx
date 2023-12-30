@@ -32,6 +32,7 @@ const Heading3 = styled.h5`
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: 400;
+  font-family: "Lato", sans-serif;
 
   & span {
     vertical-align: top;

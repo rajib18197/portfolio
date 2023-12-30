@@ -8,14 +8,12 @@ const Nav = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   /* height: 100%; */
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   position: fixed;
   top: 50%;
   right: 0%;
   transform: translate(0, -50%);
   background-color: #101d28;
-
-  color: white;
   z-index: 2000;
 `;
 
@@ -32,14 +30,15 @@ const StyledNavLink = styled.a`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
 
     color: #ffffff;
+    /* border-radius: 100px; */
 
     font-size: 1.04rem;
     font-weight: 600;
     padding: 0.35rem;
-    /* padding: 1.2rem 1.4rem; */
+    /* padding: 1rem 1.7rem; */
     transition: all 0.3s;
   }
 
@@ -55,9 +54,7 @@ const StyledNavLink = styled.a`
   & svg {
     width: 2.1rem;
     height: 2.1rem;
-    color: var(--color-brand-600);
-    color: #767676;
-    color: #8b54f1;
+    color: var(--color-brand-100);
     transition: all 0.3s;
   }
 
@@ -118,6 +115,7 @@ export default function Social({ options }) {
               href={option.href}
               download={option.download}
               target={`${option.download ? "" : "_blank"}`}
+              active={option.download ? "true" : "false"}
             >
               {option.icon}
               <span>{option.label}</span>

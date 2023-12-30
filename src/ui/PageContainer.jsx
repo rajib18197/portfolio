@@ -2,11 +2,11 @@ import styled, { css } from "styled-components";
 
 const PageContainer = styled.div`
   background-color: rgb(241, 207, 252);
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   width: 125rem;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: var(--shadow-dark);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   height: 55rem;
 
   ${(props) =>

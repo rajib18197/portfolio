@@ -61,8 +61,7 @@ const StyledNavLink = styled(NavLink)`
   & svg {
     width: 2.1rem;
     height: 2.1rem;
-    color: var(--color-brand-600);
-    color: orangered;
+    color: var(--color-brand-100);
     transition: all 0.3s;
   }
 
@@ -70,7 +69,7 @@ const StyledNavLink = styled(NavLink)`
   &:active svg,
   &.active:link svg,
   &.active:visited svg {
-    /* color: var(--color-brand-600); */
+    color: var(--color-brand-800);
   }
 `;
 

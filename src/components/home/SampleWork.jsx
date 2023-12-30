@@ -40,6 +40,7 @@ const StyledSampleWork = styled.div`
     padding-bottom: 25%;
     /* background-color: #ffede0; */
     background-color: #e4e0f3;
+    background-color: #e6e2f7;
 
     z-index: -1;
   }
@@ -74,14 +75,12 @@ const ProjectImage = styled.img`
   max-width: 75%;
   object-fit: cover;
   filter: drop-shadow(0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff);
-  /* border: 20px solid #faf0fa; */
-  outline: 20px solid #eb2f64;
-  outline: 20px solid #fbcfe8;
+  outline: 23px solid #f7f7f7;
   z-index: 1000;
 
   /* z-index: -3; */
   box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
-
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   &:last-child {
     justify-self: end;
   }

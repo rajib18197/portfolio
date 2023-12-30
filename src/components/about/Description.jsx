@@ -18,7 +18,7 @@ const StyledDescription = styled.div`
 const Paragraph = styled.p`
   font-size: 1.6rem;
   /* font-family: system-ui; */
-  line-height: 1.8;
+  line-height: 1.9;
   hyphens: none;
   color: #444;
   font-weight: 400;

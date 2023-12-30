@@ -10,8 +10,8 @@ const StyledHeader = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-family: "Megrim", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
+  font-weight: 800;
   color: white;
   text-align: center;
   position: relative;

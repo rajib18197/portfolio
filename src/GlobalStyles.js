@@ -122,7 +122,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: var(--color-grey-100);
     background-color: var(--color-grey-800);

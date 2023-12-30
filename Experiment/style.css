@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacing: 1rem;
+  --blur: 0;
+  --color: orangered;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+span {
+  color: var(--color);
+}
+
+.img-box {
+  max-width: 30rem;
+  margin: auto;
+  background-color: var(--color);
+  padding: var(--spacing);
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  filter: blur(var(--blur));
+}

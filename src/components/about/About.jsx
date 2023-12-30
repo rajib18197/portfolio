@@ -51,7 +51,7 @@ const Description = styled.div`
   grid-row: 2 / span 2;
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.9rem;
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
   /* gap: 2rem; */
@@ -217,13 +217,10 @@ const Heading6 = styled.h5`
 export default function About() {
   return (
     <Layout>
-      {/* <Heading>20 Seconds of Snippet About Who Am I.</Heading> */}
-      {/* <Heading>20 Seconds of onboarding.</Heading> */}
       <Heading>Onboarding in Seconds.</Heading>
 
       <Description>
         <Paragraph>
-          {/* BACKED UP by two things in mind [Rock means foundation] */}
           Hi there, I'm Rajib who have an immense love for building virtual
           brilliance with code BACKED UP BY TWO REAL ROCKS, SIMPLE AND USEFUL.
         </Paragraph>
@@ -234,10 +231,6 @@ export default function About() {
           myself in software engineering studies.
         </Paragraph>
         <Paragraph>
-          {/* As striving for 1000 tiny improvements, */}
-          {/* and its modern frameworks */}
-          {/* practical implementation of tools */}
-          {/* ceaselessly submerging myself in software engineering and mathematics and meticulously cultivating array of skills. */}
           As I deeply involved in the JavaScript world, I've been learning by
           building meaningfull web application that are not only useful but is
           also designed for long-term maintainability and easier to reason
@@ -247,7 +240,6 @@ export default function About() {
         <Paragraph>
           I recently graduated from Bangladesh University of Business and
           Technology's Computer Science and Engineering program.
-          {/* Dive into my Curiosity stay helps me to always stay in the game of learning which builds an skill */}
         </Paragraph>
       </Description>
 
@@ -262,8 +254,6 @@ export default function About() {
           concepts for understanding what they do and what problems they solve
           to build something ecstatic.
         </SkillIntro>
-        {/* Front-end development with React and modern libraries course */}
-        {/* You want to truly master React development, including common libraries needed to build real-world apps: React Router, Redux, React Query, React Hooks Form, and many others */}
 
         <ButtonContainer>
           <Button>JavaScript</Button>

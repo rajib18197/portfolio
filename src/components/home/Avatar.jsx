@@ -1,3 +1,4 @@
+import { GrDocumentPdf } from "react-icons/gr";
 import styled from "styled-components";
 
 const StyledAvatar = styled.div`
@@ -5,6 +6,9 @@ const StyledAvatar = styled.div`
   grid-column: 1 / span 1;
   grid-row: 1 / -1;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 2fr 1fr; */
 
   @media (max-width: 59em) {
     grid-column: 1 / span 1;
@@ -21,27 +25,32 @@ const StyledAvatar = styled.div`
 const FigCaption = styled.figcaption`
   font-family: "poppins", sans-serif;
   position: absolute;
-  bottom: 5rem;
-  left: -5%;
-  font-size: 1.3rem;
-  text-align: center;
-  text-transform: capitalize;
-  width: 110%;
-  font-weight: 400;
-  letter-spacing: 0.75px;
-  color: white;
-  /* color: #0004ff; */
-  /* text-shadow: 0 0 5px #002fff, 0 0 5px #0051ff, 0 0 5px #1900ff; */
+  bottom: 2rem;
+  left: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
 
-  background-color: #101d28;
-  /* border-left: 2px solid #121212; */
-  border-radius: 3px;
-  padding: 1rem 0.4rem;
+  background-color: #fff8f8d8;
+  padding: 0.5rem;
 
-  & > span {
+  & > p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.5px;
+
     & span {
-      display: inline-block;
-      transform: translateY(-4px);
+      background-image: none;
+      color: white;
     }
   }
 
@@ -67,26 +76,65 @@ const FigCaption = styled.figcaption`
 const Img = styled.img`
   max-width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   object-fit: cover;
   /* border: 4px solid #eb2f64; */
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
-  background-blend-mode: screen;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
   @media (max-width: 59em) {
     width: 100%;
   }
 `;
 
+const StyledNavLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* justify-self: end; */
+  align-self: end;
+  gap: 1rem;
+  width: max-content;
+  margin: auto;
+  /* font-family: "Megrim", sans-serif; */
+  font-size: 1.4rem;
+  color: #f8f6f6;
+  background-color: #27192b;
+  position: relative;
+  word-spacing: 3px;
+  width: max-content;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  @media (max-width: 59em) {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    text-align: center;
+    /* width: 50%;
+    margin: 0 auto; */
+  }
+`;
 export default function Avatar() {
   return (
     <StyledAvatar>
       <Img src="raju.jpg" alt="Image of myself" />
       <FigCaption>
-        <span>
-          📚 Prioritizing my <span>unJustifiable</span> Learning & growth 📈
-        </span>
+        <p>
+          Doing Nothing but Experimenting
+          {/* <span>📚</span> Prioritizing my unJustifiable Learning & growth{" "} */}
+          {/* <span>📈</span> */}
+        </p>
+        <div>
+          <StyledNavLink
+            href="https://drive.google.com/uc?export=download&id=17Tt2qOBhJZ8Uw4YOQApo3yPUWUNljhsH"
+            download={true}
+            target="_blank"
+          >
+            <GrDocumentPdf />
+            <span>Download Resume</span>
+          </StyledNavLink>
+        </div>
       </FigCaption>
     </StyledAvatar>
   );

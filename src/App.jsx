@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useParams,
+} from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 
 import AppLayout from "./ui/AppLayout";
@@ -8,7 +14,7 @@ import About from "./pages/About";
 import ProjectExplantions from "./pages/ProjectExplanations";
 
 // TODO:
-// Update your project explanation page from time to time
+// Update to project explanation page from time to time
 // add a spinner when loading and Error compnent
 
 export default function App() {
@@ -21,8 +27,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route
               path="/projects/:id"
