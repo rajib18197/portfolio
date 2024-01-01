@@ -38,11 +38,6 @@ const Name = styled.h1`
   font-weight: 400;
   color: #444;
   text-transform: uppercase;
-  /* background-image: linear-gradient(to right, #7ed56f, #28b485); */
-  /* background-image: linear-gradient(to right bottom, #ffb900, #ff7730); */
-  /* background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
-  -webkit-background-clip: text;
-  color: transparent; */
   letter-spacing: 0.2rem;
   font-weight: 400;
   line-height: 1;
@@ -74,7 +69,7 @@ const Secondary = styled(Name)`
     content: "";
     display: block;
     height: 4px;
-    background-color: #212133;
+    background-color: #444;
   }
 
   @media (max-width: 70em) {

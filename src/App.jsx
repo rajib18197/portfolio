@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import ProjectExplantions from "./pages/ProjectExplanations";
+import First from "./components/first";
 
 // TODO:
 // Update to project explanation page from time to time
