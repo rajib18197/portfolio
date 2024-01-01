@@ -31,7 +31,6 @@ const StyledIntro = styled.div`
 const Name = styled.h1`
   font-family: "Lato", sans-serif;
   font-size: 5.7rem;
-  color: white;
   word-spacing: 3px;
   display: flex;
   gap: 3rem;
@@ -84,11 +83,64 @@ const Secondary = styled(Name)`
 export default function Intro() {
   return (
     <StyledIntro>
-      {/* <Name>
-        <span>📚</span> Hi, I'm Rajib! <span>📈</span>
-      </Name> */}
       <Name>Hi, I'm Rajib Das!</Name>
       <Secondary>Frontend Engineer</Secondary>
     </StyledIntro>
   );
 }
+
+// import { useEffect, useState } from "react";
+
+// export default function First() {
+//   const [data1, setData1] = useState({});
+//   console.log(111111);
+
+//   useEffect(function () {
+//     console.log("I am 1");
+//     fetch("https://jsonplaceholder.typicode.com/todos/1")
+//       .then((response) => response.json())
+//       .then((json) => {
+//         console.log(json);
+//         setData1(json);
+//       });
+//   }, []);
+//   return (
+//     <>
+//       <h2>Hello I am first {data1?.id}</h2>
+//       <Second />
+//       <Third />
+//     </>
+//   );
+// }
+
+// function Second() {
+//   const [data1, setData1] = useState({});
+//   console.log(22222);
+
+//   useEffect(function () {
+//     console.log("I am 2");
+//     fetch("https://jsonplaceholder.typicode.com/todos/2")
+//       .then((response) => response.json())
+//       .then((json) => {
+//         console.log(json);
+//         setData1(json);
+//       });
+//   }, []);
+//   return <div>hello I am second {data1?.id}</div>;
+// }
+
+// function Third() {
+//   const [data1, setData1] = useState({});
+//   console.log(333333);
+
+//   useEffect(function () {
+//     console.log("I am 3");
+//     fetch("https://jsonplaceholder.typicode.com/todos/3")
+//       .then((response) => response.json())
+//       .then((json) => {
+//         console.log(json);
+//         setData1(json);
+//       });
+//   }, []);
+//   return <div>hello I am third {data1?.id}</div>;
+// }
