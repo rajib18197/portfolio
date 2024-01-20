@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Article from "../components/projectExplanations/Article";
 import ProjectName from "../components/projectExplanations/ProjectName";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useHttp } from "../hooks/useHttp";
 import { getProject, getProjects } from "../services/apiProjects";
 import Social from "../ui/Social";
@@ -9,6 +9,7 @@ import styled from "styled-components";
 import ProjectBox from "../components/projects/ProjectBox";
 import Heading from "../components/about/Heading";
 import { FaHeart } from "react-icons/fa";
+import { data } from "../data/portfolio-data";
 
 const Link = styled.div`
   display: grid;
@@ -53,38 +54,25 @@ export default function ProjectExplantions() {
   const { id } = useParams();
   console.log(id);
 
-  const {
-    data: [project = {}] = [],
-    isLoading,
-    isError,
-    error,
-  } = useHttp(getProject, id);
-
-  console.log(project);
-
-  const {
-    data: otherProjects,
-    isLoading: isOtherLoading,
-    isError: isOtherError,
-  } = useHttp(getProjects);
-
-  // if (isLoading) return <h1>Loading</h1>;
-
-  // if (!isLoading && isError) return <h2>{error.message}</h2>;
-
-  // console.log(projects);
-
-  if (isLoading || isOtherLoading) return <h1>Loading</h1>;
-
-  if (!isLoading && isError) return <h2>{error.message}</h2>;
-
-  if (Object.keys(project).length === 0) return <h2>Loading</h2>;
+  const project = data.find((project) => Number(project.id) === Number(id));
+  const otherProjects = data.filter(
+    (project) => Number(project.id) !== Number(id)
+  );
 
   console.log(project);
   console.log(otherProjects);
 
+  const ref = useRef();
+
+  useEffect(
+    function () {
+      if (ref.current) ref.current.scrollIntoView({ behavior: "smooth" });
+    },
+    [id]
+  );
+
   return (
-    <>
+    <div ref={ref}>
       <ProjectName name={project.name} />
       <Article article={project} />
 
@@ -100,6 +88,35 @@ export default function ProjectExplantions() {
           <FaHeart /> Thank You So much for reading <FaHeart />
         </Greeting>
       </Other>
-    </>
+    </div>
   );
 }
+
+// 1st Draft
+
+// const {
+//   data: [project = {}] = [],
+//   isLoading,
+//   isError,
+//   error,
+// } = useHttp(getProject, id);
+
+// console.log(project);
+
+// const {
+//   data: otherProjects,
+//   isLoading: isOtherLoading,
+//   isError: isOtherError,
+// } = useHttp(getProjects);
+
+// if (isLoading) return <h1>Loading</h1>;
+
+// if (!isLoading && isError) return <h2>{error.message}</h2>;
+
+// console.log(projects);
+
+// if (isLoading || isOtherLoading) return <h1>Loading</h1>;
+
+// if (!isLoading && isError) return <h2>{error.message}</h2>;
+
+// if (Object.keys(project).length === 0) return <h2>Loading</h2>;

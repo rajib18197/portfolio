@@ -1,10 +1,5 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import GlobalStyles from "./GlobalStyles";
 
 import AppLayout from "./ui/AppLayout";
@@ -18,9 +13,6 @@ import ProjectExplantions from "./pages/ProjectExplanations";
 // add a spinner when loading and Error compnent
 
 export default function App() {
-  const { id } = useParams();
-  console.log(id);
-
   return (
     <>
       <GlobalStyles />
@@ -29,10 +21,7 @@ export default function App() {
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
-            <Route
-              path="/projects/:id"
-              element={<ProjectExplantions key={id} />}
-            />
+            <Route path="/projects/:id" element={<ProjectExplantions />} />
             <Route path="/about" element={<About />} />
           </Route>
         </Routes>

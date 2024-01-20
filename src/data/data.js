@@ -210,7 +210,7 @@ export {
 // var bob = new WinterStorm();
 // console.log(bob.precip);
 
-const projectsList = [
+export const projectsList = [
   {
     name: "EatroVion",
     image: "/public/cabin-001.jpg",
