@@ -43,8 +43,8 @@ export default function Description() {
   return (
     <StyledDescription>
       <Paragraph>
-        Hey! I'm Rajib, A Frontend Engineer who finds spark of excitement to
-        design solutions with code BACKED UP BY TWO REAL ROCKS, SIMPLE AND
+        Hi there! I'm Rajib, A Frontend Engineer who finds spark of excitement
+        to design solutions with code BACKED UP BY TWO REAL ROCKS, SIMPLE AND
         USEFUL.
       </Paragraph>
       <Paragraph>
